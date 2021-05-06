@@ -1,5 +1,5 @@
 // import AllPostPage from "./components/exportdata";
-import {CSVLink, CSVDownload} from "react-csv";
+import {CSVLink} from "react-csv";
 // import{CsvDownloader, CSVDownload}  from 'react-csv-downloader';
 import './App.css';
 
