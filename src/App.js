@@ -23,26 +23,27 @@ const Data=[
   { firstName: "Kitra", lastName: "Hammond", email: "fiwiloqu@mailinator.com", age: "35" },
   { firstName: "Charity", lastName: "Mathews", email: "fubigonero@mailinator.com", age: "63" }
 ];
-const headers=[
-{label: "First Name", key:"firstName"},
-{label: "Last Name", key:"lastName"},
-{label: "Email", key:"email"},
-{label:"Age", key:"age"}
-];
+// const headers=[
+// {label: "First Name", key:"firstName"},
+// {label: "Last Name", key:"lastName"},
+// {label: "Email", key:"email"},
+// {label:"Age", key:"age"}
+// ];
 
-const csvreport ={
-  filename: 'Report.csv',
-  headers: headers,
-  data:Data
-}
+// const csvreport ={
+//   filename: 'Report.csv',
+//   headers: headers,
+//   data:Data
+// }
 
 
 function App() {
   return (
     <div className="App">
      
-     <CSVDownload {...csvreport} target="_blank" />;
+     {/* <CSVDownload {...csvreport} target="_blank" /> */}
       {/* <CSVLink {...csvreport}>Export to CSV..!!</CSVLink> */}
+      <CSVLink data={Data}  target="_blank">Export csv here..!!</CSVLink>
  
       {/* <AllPostPage /> */}
     </div>
