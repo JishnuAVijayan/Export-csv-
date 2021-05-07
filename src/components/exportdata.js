@@ -31,21 +31,21 @@ class AllPostPage extends React.Component {
        };
     }
 
-   download(event) {
-      const currentRecords = this.reactTable.getResolvedState().sortedData;
-      var data_to_download = []
-      for (var index = 0; index < currentRecords.length; index++) {
-         let record_to_download = {}
-         for(var colIndex = 0; colIndex < columns.length ; colIndex ++) {
-            record_to_download[columns[colIndex].Header] = currentRecords[index][columns[colIndex].accessor]
-         }
-         data_to_download.push(record_to_download)
-      }
-      this.setState({ dataToDownload: data_to_download }, () => {
-         // click the CSVLink component to trigger the CSV download
-         this.csvLink.link.click()
-      })
-    } 
+   // download(event) {
+   //    const currentRecords = this.reactTable.getResolvedState().sortedData;
+   //    var data_to_download = []
+   //    for (var index = 0; index < currentRecords.length; index++) {
+   //       let record_to_download = {}
+   //       for(var colIndex = 0; colIndex < columns.length ; colIndex ++) {
+   //          record_to_download[columns[colIndex].Header] = currentRecords[index][columns[colIndex].accessor]
+   //       }
+   //       data_to_download.push(record_to_download)
+   //    }
+   //    this.setState({ dataToDownload: data_to_download }, () => {
+   //       // click the CSVLink component to trigger the CSV download
+   //       this.csvLink.link.click()
+   //    })
+   //  } 
 
     render() {
        return <div>
@@ -63,13 +63,13 @@ class AllPostPage extends React.Component {
                         target="_blank"/>
 
                  </div>
-                 <div>
+                 {/* <div>
                     <ReactTable ref={(r) => this.reactTable = r}
                                 data={this.state.tableproperties.allData} columns={columns} filterable
                                 defaultFilterMethod={(filter, row) =>
                                     String(row[filter.id]).toLowerCase().includes(filter.value.toLowerCase())}
                     />
-                 </div>
+                 </div> */}
               </div>
     }
 }

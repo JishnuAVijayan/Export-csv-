@@ -2,6 +2,7 @@
 import {CSVLink} from "react-csv";
 // import{CsvDownloader, CSVDownload}  from 'react-csv-downloader';
 import './App.css';
+import AsyncCSV from "./components/AsyncCSV";
 
 // const Data = [
 //   // ["firstname", "lastname", "email"],
@@ -41,10 +42,10 @@ function App() {
   return (
     <div className="App">
      
-     {/* <CSVDownload {...csvreport} target="_blank" /> */}
+      {/* <CSVDownload {...csvreport} target="_blank" /> */}
       {/* <CSVLink {...csvreport}>Export to CSV..!!</CSVLink> */}
       <CSVLink data={Data}  target="_blank">Export csv here..!!</CSVLink>
- 
+    <AsyncCSV />
       {/* <AllPostPage /> */}
     </div>
   );
